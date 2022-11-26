@@ -1,9 +1,10 @@
 {
   "name": "second-randomizer",
   "type": "module",
+  "types": "./second-randomizer.d.ts",
   "version": "1.0.0",
   "description": "This package features some utility functions that generate non-discrete seconds. This is useful whenever you need to humanize certain automated processes such as web scraping for example.",
-  "main": "second-randomizer.js",
+  "main": "./second-randomizer.js",
   "author": "Maximillian Heth",
   "license": "MIT",
   "devDependencies": {
