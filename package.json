@@ -7,9 +7,14 @@
   "author": "Maximillian Heth",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "2.8.0",
     "tsc": "^2.0.4"
   },
   "dependencies": {
     "typescript": "^4.9.3"
+  },
+  "repository": {
+    "type": "public",
+    "url": "https://github.com/maxxheth/second-randomizer"
   }
 }
