@@ -1,4 +1,4 @@
-export const secondRandomizer = (second: number) => {
+export const randomizeSecond = (second: number) => {
   if (second < 1000) {
     second = second * 1000;
   }
@@ -36,7 +36,7 @@ export const createRandomizedSeconds = (qty: number) => {
     secondsArray.push(second);
   }
 
-  return secondsArray.map((second) => secondRandomizer(second));
+  return secondsArray.map((second) => randomizeSecond(second));
 };
 
 export const getRandomizedSecond = (qty: number) => {
