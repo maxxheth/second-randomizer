@@ -16,7 +16,6 @@ export const secondRandomizer = (second) => {
         ? second + newRandomNumber
         : second - newRandomNumber;
 };
-const seconds = secondRandomizer(3000);
 export const createRandomizedSeconds = (qty) => {
     const secondsArray = [];
     for (let x = 1; x < qty + 1; x++) {
@@ -25,7 +24,6 @@ export const createRandomizedSeconds = (qty) => {
     }
     return secondsArray.map((second) => secondRandomizer(second));
 };
-const result = createRandomizedSeconds(20);
 export const getRandomizedSecond = (qty) => {
     const randomizedSeconds = createRandomizedSeconds(qty);
     return randomizedSeconds[Math.floor(randomizedSeconds.length * Math.random())];
