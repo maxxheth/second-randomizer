@@ -46,5 +46,3 @@ export const getRandomizedSecond = (qty: number) => {
     Math.floor(randomizedSeconds.length * Math.random())
   ];
 };
-
-const randomSecond = getRandomizedSecond(20);
