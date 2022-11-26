@@ -1,5 +1,4 @@
-"use strict";
-const secondRandomizer = (second) => {
+export const secondRandomizer = (second) => {
     if (second < 1000) {
         second = second * 1000;
     }
@@ -13,25 +12,22 @@ const secondRandomizer = (second) => {
     const newRandomNumber = flipACoin(trueFalse)
         ? randomizeByNudgeVal(nudgeVals)
         : -randomizeByNudgeVal(nudgeVals);
-    console.log({ second, newRandomNumber });
     return flipACoin(trueFalse)
         ? second + newRandomNumber
         : second - newRandomNumber;
 };
 const seconds = secondRandomizer(3000);
-const createRandomizedSeconds = (qty) => {
+export const createRandomizedSeconds = (qty) => {
     const secondsArray = [];
     for (let x = 1; x < qty + 1; x++) {
-        const decision = x * 1000;
-        secondsArray.push(decision);
+        const second = x * 1000;
+        secondsArray.push(second);
     }
     return secondsArray.map((second) => secondRandomizer(second));
 };
 const result = createRandomizedSeconds(20);
-console.log({ result });
-const getRandomizedSecond = (qty) => {
+export const getRandomizedSecond = (qty) => {
     const randomizedSeconds = createRandomizedSeconds(qty);
     return randomizedSeconds[Math.floor(randomizedSeconds.length * Math.random())];
 };
 const randomSecond = getRandomizedSecond(20);
-console.log({ randomSecond });

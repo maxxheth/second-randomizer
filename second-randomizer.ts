@@ -24,8 +24,6 @@ export const secondRandomizer = (second: number) => {
     ? randomizeByNudgeVal(nudgeVals)
     : -randomizeByNudgeVal(nudgeVals);
 
-  console.log({ second, newRandomNumber });
-
   return flipACoin(trueFalse)
     ? second + newRandomNumber
     : second - newRandomNumber;
@@ -37,17 +35,15 @@ export const createRandomizedSeconds = (qty: number) => {
   const secondsArray: number[] = [];
 
   for (let x = 1; x < qty + 1; x++) {
-    const decision = x * 1000;
+    const second = x * 1000;
 
-    secondsArray.push(decision);
+    secondsArray.push(second);
   }
 
   return secondsArray.map((second) => secondRandomizer(second));
 };
 
 const result = createRandomizedSeconds(20);
-
-console.log({ result });
 
 export const getRandomizedSecond = (qty: number) => {
   const randomizedSeconds = createRandomizedSeconds(qty);
@@ -58,5 +54,3 @@ export const getRandomizedSecond = (qty: number) => {
 };
 
 const randomSecond = getRandomizedSecond(20);
-
-console.log({ randomSecond });
