@@ -27,7 +27,7 @@ export const randomizeSecond = (second: number) => {
     : second - newRandomNumber;
 };
 
-export const createRandomizedSeconds = (qty: number) => {
+export const getRandomizedSeconds = (qty: number) => {
   const secondsArray: number[] = [];
 
   for (let x = 1; x < qty + 1; x++) {
@@ -40,7 +40,7 @@ export const createRandomizedSeconds = (qty: number) => {
 };
 
 export const getRandomizedSecond = (qty: number) => {
-  const randomizedSeconds = createRandomizedSeconds(qty);
+  const randomizedSeconds = getRandomizedSeconds(qty);
 
   return randomizedSeconds[
     Math.floor(randomizedSeconds.length * Math.random())
