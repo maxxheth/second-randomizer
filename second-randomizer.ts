@@ -6,8 +6,6 @@ export const secondRandomizer = (second: number) => {
   const randomize = (array: Array<unknown>) =>
     Math.floor(array.length * Math.random());
 
-  const randomNumber = Math.random();
-
   const nudgeVals = [100, 1000, 50, 500, 25, 250, 75, 750];
 
   const trueFalse = [true, false];
